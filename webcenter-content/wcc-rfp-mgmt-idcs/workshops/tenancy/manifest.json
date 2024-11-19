@@ -1,10 +1,10 @@
 {
-  "workshoptitle": "Build Intelligent Content Applications at cloud speed with Oracle WebCenter & Oracle APEX",
+  "workshoptitle": "Build Intelligent Content Applications at cloud speed with Oracle WebCenter & Oracle APEX - Along with IDCS Integration",
   "help": "mandar.x.tengse@oracle.com",
   "tutorials": [
     {
       "title": "Introduction",
-      "description": "This lab provides detailed guide to set up Records on WebCenter Content Server",
+      "description": "This lab provides detailed guide to Build Intelligent Content Applications at cloud speed with Oracle WebCenter & Oracle APEX - Along with IDCS Integration",
       "filename": "./../../introduction/introduction.md"
     },
     {
@@ -18,8 +18,8 @@
       "filename": "../../01-prepare-setup/01-prepare-setup.md"
     },
     {
-      "title": "Lab 2: Setup WCC Marketplace Environment with IDCS",
-      "description": "How to provision the workshop environment and connect to it",
+      "title": "Lab 2: Setup WCC Marketplace Environment with IDCS enabled",
+      "description": "How to provision the workshop environment with IDCS enabled and connect to it",
       "filename": "../../02-wcc-environment-setup/02-wcc-environment-setup.md"
     },
     {
@@ -28,7 +28,7 @@
       "filename": "./../../03-initialize-environment/03-initialize-environment.md"
     },
     {
-      "title": "Lab 4: Setup APEX Application",
+      "title": "Lab 4: Setup APEX Application & Configure SSO/IDCS",
       "description": "This lab shows you how to create new workspace and import WCC RFP Management System APEX Application",
       "filename": "./../../04-setup-apex-application/04-setup-apex-application.md"
     },
@@ -38,8 +38,8 @@
       "filename": "./../../05-create-new-rfp-doc/05-create-new-rfp-doc.md"
     },
     {
-      "title": "Lab 6: Update and Complete Documents for Sections",
-      "description": "This lab shows you how to Preview, Download , Update the Section Document and Complete the Sections, so that it can be merged to create a RFP Response Document.",
+      "title": "Lab 6: Update and Complete Documents for Sections Assigned to Individual User(s)",
+      "description": "This lab shows you how to Preview, Download , Update the Section Document and Complete the Sections , assigned to the individual users , so that it can be merged to create a RFP Response Document.",
       "filename": "./../../06-update-sections/06-update-sections.md"
     },
     {
