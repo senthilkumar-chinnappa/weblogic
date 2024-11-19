@@ -1,4 +1,4 @@
-# Setup WebCenter Content Marketplace Instance
+# Setup WCC Marketplace Environment With IDCS Enabled
 
 ## Introduction
 

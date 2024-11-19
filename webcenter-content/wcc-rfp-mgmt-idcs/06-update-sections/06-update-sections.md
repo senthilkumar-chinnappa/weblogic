@@ -1,4 +1,4 @@
-# Update Documents for Section Types
+# Update and Complete Documents for Sections Assigned to Individual User(s)
 
 ## Introduction
 

@@ -1,4 +1,4 @@
-# Setup RFP Management APEX Application
+# Setup APEX Application & Configure SSO/IDCS
 
 ## Introduction
 
