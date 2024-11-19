@@ -25,22 +25,24 @@ This lab assumes you have:
 
 ## Task 1: Validate That WebCenter Content CS URL
 
-1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** noted on the previous **Lab 2 - Setup WCC Marketplace Environment** ), click on the *Login* and Login using the below credentials
-    - URL
+1. Open the *web browser* window with *WebCenter Content* homepage url ( ie the **WebCenter Content CS Endpoint URL** noted on the previous **Lab 2 - Setup WCC Marketplace Environment** ), click on the *Login* .
+    - It redirects to the IDCS Sign In page
+    - Login using the Admin User credentials
+    - **URL**
             ```
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-    - Username
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+    - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
-            <copy>weblogic</copy>
+            <copy>wccadmin</copy>
             ```
-    - Password
+    - **Password** : Provide the password for the above IDCS User
             ```
             <copy>Welcome1</copy>
             ```
-    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials accordingly*
+    > *Note: Use user credentials accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Confirm successful login.
@@ -55,22 +57,22 @@ This lab assumes you have:
 
 ## Task 2: Validate WebCenter Content Search/Index Engine
 
-1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
+1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User . Details are provided below:
     - **URL**
             ```
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-    - **Username**
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+    - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
-            <copy>weblogic</copy>
+            <copy>wccadmin</copy>
             ```
-    - **Password**
+    - **Password** : Provide the password for the above IDCS User
             ```
             <copy>Welcome1</copy>
             ```
-    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
+    > *Note: Use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Under **Administration** tab, click on **Configuration for \<your\_instance\_name\>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
@@ -99,29 +101,29 @@ DisableAuthorizationTokenCheck=1</copy>
 
 ## Task 4: Import WebCenter Content Configuration bundle
 
-1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administator User (eg: weblogic). Details are provided below:
+1. On the new *web browser* window , Login to the *WebCenter Content* homepage URL as Administrator User (eg: weblogic). Details are provided below:
     - **URL**
             ```
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-          > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-    - **Username**
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+    - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
-            <copy>weblogic</copy>
+            <copy>wccadmin</copy>
             ```
-    - **Password**
+    - **Password** : Provide the password for the above IDCS User
             ```
             <copy>Welcome1</copy>
             ```
-    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
+    > *Note: Use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, then expand **Config Migration Admin** and click on **Upload Bundle** link
 
     ![This image shows the WCC Instance Configuration Page - Config Migration Admin](./images/webcenter_config_task3_step2.png "WCC Instance Configuration Page - Config Migration Admin")
 
-3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt\_wcc\_profile\_setup_bundle.zip** )  from the downloaded **wcc\_rfp\_resources.zip** file ( in **Lab 1 - Prepare Setup**) , check the **Force Overwrite** checkbox and click on **Upload** Button
+3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt\_wcc\_profile\_setup_bundle.zip** )  from the downloaded **wcc\_rfp\_resources\_idcs.zip** file ( in **Lab 1 - Prepare Setup**) , check the **Force Overwrite** checkbox and click on **Upload** Button
 
     ![This image shows the WCC Instance Upload configuration Bundle Page ](./images/webcenter_config_task3_step3.png "WCC Instance Upload configuration Bundle Page")
 
@@ -163,16 +165,16 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-    - **Username**
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+    - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
-            <copy>weblogic</copy>
+            <copy>wccadmin</copy>
             ```
-    - **Password**
+    - **Password** : Provide the password for the above IDCS User
             ```
             <copy>Welcome1</copy>
             ```
-    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
+    > *Note: Use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Configuration Manager**
@@ -235,16 +237,16 @@ This task helps in enabling WCC Workflows for Section Documents
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
-    - **Username**
+           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+    - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
-            <copy>weblogic</copy>
+            <copy>wccadmin</copy>
             ```
-    - **Password**
+    - **Password** : Provide the password for the above IDCS User
             ```
             <copy>Welcome1</copy>
             ```
-    > *Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), use user credentials (which as Administrator Privileges) accordingly*
+    > *Note: Use user credentials (which as Administrator Privileges) accordingly*
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Workflow Admin**
@@ -256,6 +258,10 @@ This task helps in enabling WCC Workflows for Section Documents
     > When prompted, Click *Yes* in the enable workflow confirmation dialog box
 
     ![This image shows the WCC Workflow Admin Java Applet](./images/webcenter_config_task5_step3.png "WCC Workflow Admin Java Applet Window")
+
+4. Similarly, select and click on **Enable** Button for the below two Workflows as well
+    - **LegalSectionWorkflow**
+    - **TechnicalSectionWorkflow**
 
 ## Task 7: Validate APEX is Up and Running
 

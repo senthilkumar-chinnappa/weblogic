@@ -37,7 +37,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
           <copy>https://localhost:16200/ords/</copy>
           ```
 
-         > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+         > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
     - **Workspace Name**
           ```
           <copy>INTERNAL</copy>
@@ -118,7 +118,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
             <copy>https://localhost:16200/ords/</copy>
             ```
 
-            > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+            > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
     - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
       - **Workspace Name**: Enter
@@ -156,7 +156,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
 This task covers installing and running a WCC RFP Management System APEX application.
 
-1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app.sql** in a text editor (eg: Notepad) , replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
+1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app-idcs.sql** in a text editor (eg: Notepad) , replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
 
       > Note: *In the scenario, where WebCenter Content is configured with IDCS or any other username ( other than **weblogic** )*, replace these two values as well:
