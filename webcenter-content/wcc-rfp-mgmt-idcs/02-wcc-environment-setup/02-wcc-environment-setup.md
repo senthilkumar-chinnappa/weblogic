@@ -77,7 +77,7 @@ To provision Oracle WebCenter Content on a Marketplace instance:
 
           - **OCI Policies** : *Selected*
 
-          - **Enable Authentication Using Identity Cloud Service** : *Un-Select*
+          - **Enable Authentication Using Identity Cloud Service** : *Select*
 
           - **Enable Private Service** : *Un-Select*
 
