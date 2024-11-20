@@ -30,7 +30,7 @@
     {
       "title": "Lab 4: Setup APEX Application",
       "description": "This lab shows you how to create new workspace and import WCC RFP Management System APEX Application",
-      "filename": "./../../04-setup-apex-application/04-setup-apex-application.md"
+      "filename": "./../../04-setup-apex-application-idcs/04-setup-apex-application-idcs.md"
     },
     {
       "title": "Lab 5: Config APEX Application with SSO/IDCS",
