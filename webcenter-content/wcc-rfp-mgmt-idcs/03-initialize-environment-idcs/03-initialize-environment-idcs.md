@@ -33,7 +33,7 @@ This lab assumes you have:
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+        > Note : Replace `"https://localhost:16200"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com:16200"` or `"https://192.0.0.0:16200"`)
     - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
             <copy>wccadmin</copy>
@@ -63,7 +63,7 @@ This lab assumes you have:
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost:16200"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com:16200"` or `"https://192.0.0.0:16200"`)
     - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
             <copy>wccadmin</copy>
@@ -73,6 +73,7 @@ This lab assumes you have:
             <copy>Welcome1</copy>
             ```
     > *Note: Use user credentials (which as Administrator Privileges) accordingly*
+
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. Under **Administration** tab, click on **Configuration for \<your\_instance\_name\>** and check for the **Search Engine** & **Index Engine Name**, for the value as **ORACLETEXTSEARCH**
@@ -107,7 +108,7 @@ DisableAuthorizationTokenCheck=1</copy>
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost:16200"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com:16200"` or `"https://192.0.0.0:16200"`)
     - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
             <copy>wccadmin</copy>
@@ -123,7 +124,7 @@ DisableAuthorizationTokenCheck=1</copy>
 
     ![This image shows the WCC Instance Configuration Page - Config Migration Admin](./images/webcenter_config_task3_step2.png "WCC Instance Configuration Page - Config Migration Admin")
 
-3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt\_wcc\_profile\_setup_bundle.zip** )  from the downloaded **wcc\_rfp\_resources\_idcs.zip** file ( in **Lab 1 - Prepare Setup**) , check the **Force Overwrite** checkbox and click on **Upload** Button
+3. In the **Upload configuration Bundle** Page, Select the Bundle ( **wccrfpmgmt\_wcc\_profile\_setup\_bundle\_idcs.zip** )  from the downloaded **wcc\_rfp\_resources\_idcs.zip** file ( in **Lab 1 - Prepare Setup**) , check the **Force Overwrite** checkbox and click on **Upload** Button
 
     ![This image shows the WCC Instance Upload configuration Bundle Page ](./images/webcenter_config_task3_step3.png "WCC Instance Upload configuration Bundle Page")
 
@@ -165,7 +166,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost:16200"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com:16200"` or `"https://192.0.0.0:16200"`)
     - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
             <copy>wccadmin</copy>
@@ -175,6 +176,7 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
             <copy>Welcome1</copy>
             ```
     > *Note: Use user credentials (which as Administrator Privileges) accordingly*
+
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Configuration Manager**
@@ -222,6 +224,17 @@ This task helps in adding RFP related ProfileTriggerValues to xIdcProfile
                     ```
     ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_4.png "WCC Configuration Manager Java Applet Window")
 
+    - For **RFP_Section_Template**,
+        - *dProfileTriggerValue* - Enter
+                    ```
+                    <copy>RFP_Section_Template</copy>
+                    ```
+        - *dProfileTriggerOrder* - Enter
+                    ```
+                    <copy>5</copy>
+                    ```
+    ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step4_5.png "WCC Configuration Manager Java Applet Window")
+
 5. Ensure all the three values are added in the list and click **Close** Button in the Edit Values Applet window
 
     ![This image shows the WCC Configuration Manager Java Applet](./images/webcenter_config_task4_step5.png "WCC Configuration Manager Java Applet Window")
@@ -237,7 +250,7 @@ This task helps in enabling WCC Workflows for Section Documents
             <copy>https://localhost:16200/cs/</copy>
             ```
 
-           > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+           > Note : Replace `"https://localhost:16200"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com:16200"` or `"https://192.0.0.0:16200"`)
     - **Username** : Provide the IDCS username which was given as the input in the previous **Lab 2 - Setup WCC Marketplace Environment** step for Identity Domain Administrator Username
             ```
             <copy>wccadmin</copy>
@@ -247,6 +260,7 @@ This task helps in enabling WCC Workflows for Section Documents
             <copy>Welcome1</copy>
             ```
     > *Note: Use user credentials (which as Administrator Privileges) accordingly*
+
     ![This image shows the WCC Instance Login Page](./images/webcenter_config_task3_step1.png "WCC Instance Login Page")
 
 2. In the left navigation pane, expand **Administration** section, click on **Admin Applets** and click on **Workflow Admin**
@@ -259,9 +273,11 @@ This task helps in enabling WCC Workflows for Section Documents
 
     ![This image shows the WCC Workflow Admin Java Applet](./images/webcenter_config_task5_step3.png "WCC Workflow Admin Java Applet Window")
 
-4. Similarly, select and click on **Enable** Button for the below two Workflows as well
+4. Similarly, select and click on **Enable** Button for the below two Workflows also
     - **LegalSectionWorkflow**
     - **TechnicalSectionWorkflow**
+
+    ![This image shows the WCC Workflow Admin Java Applet](./images/webcenter_config_task5_step3_1.png "WCC Workflow Admin Java Applet Window")
 
 ## Task 7: Validate APEX is Up and Running
 
