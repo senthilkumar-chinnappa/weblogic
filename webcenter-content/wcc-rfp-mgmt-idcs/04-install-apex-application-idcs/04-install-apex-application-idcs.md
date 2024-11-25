@@ -348,8 +348,8 @@ You are now ready to **proceed to the next lab**.
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_upt.png "View the Certificate details and export")
 
-      > **Note** : If there is more than one level of hierarchy, select the top most root entry
-        ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_1_upt.png "View the Certificate details and export")
+    > **Note** : If there is more than one level of hierarchy, select the top most root entry
+      ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_1_upt.png "View the Certificate details and export")
 
    4. Save the file as the below filename
       - **Filename**
@@ -458,6 +458,14 @@ You are now ready to **proceed to the next lab**.
       - **Note** : *If you see any issue with the APEX URL, click on the link on error list and select the default url*
 
       ![wallet update in APEX](./images/apex_hs_setup_ap1_step3_2_upt.png "wallet update in APEX")
+
+      - **Note** *: If there is any error shown, please click on the error description, and provide the (Default) value for those fields and click **Apply Changes***
+
+        ![Provide values in-case of any error](./images/apex_hs_setup_ap1_step3_2_1_upt.png "Click and Provide values in-case of any error")
+
+   3. Instance Settings changes gets saved successfully.
+    ![Instance settings changes successfully](./images/apex_hs_setup_ap1_step3_3_upt.png "Instance settings changes successfully")
+
 
 ## Acknowledgements
 
