@@ -303,13 +303,11 @@ You are now ready to **proceed to the next lab**.
 
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
-      ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
-    ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
-    ![Open Certificate Info 1](./images/apex_hs_setup_ap1_step1_1_upt.png "Refresh from Service Catalog 1")
+      ![Open Certificate Info](./images/apex_hs_setup_ap1_step1_1_upt.png "View the Certificate details")
 
 
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
-      ![Export Certificate](./images/apex_https_setup_ap1_step1_2_upt.png "View the Certificate details and export")
+      ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_upt.png "View the Certificate details and export")
 
    4. Save the file as the below filename
       - **Filename**
@@ -317,15 +315,15 @@ You are now ready to **proceed to the next lab**.
             <copy>WCCRFPMGM.crt</copy>
             ```
 
-      ![Save Certificate](./images/apex_https_setup_ap1_step1_3_upt.png "Save the certificate as crt")
+      ![Save Certificate](./images/apex_hs_setup_ap1_step1_3_upt.png "Save the certificate as crt")
 
 ### **1.2 Connect to DB System via SSH and create wallet**
 
    1. Log in to **OCI Console**, navigate to **Oracle Database**, then to **Oracle Base Database Service** and Click on the DB System **wcc-rfpmgmt-DBSystem** ( *which was created as part of the Lab **Prepare Setup*** )
-      ![Oracle DB System](./images/apex_https_setup_ap1_step2_1_upt.png "View Oracle DB System details")
+      ![Oracle DB System](./images/apex_hs_setup_ap1_step2_1_upt.png "View Oracle DB System details")
 
    2. Scroll down to the **Resources** Section and click on **Nodes**. Note the *IP Address* of all the Nodes listed
-      ![Oracle DB System Nodes and IP Info](./images/apex_https_setup_ap1_step2_2_upt.png "View Oracle DB System Node IP details")
+      ![Oracle DB System Nodes and IP Info](./images/apex_hs_setup_ap1_step2_2_upt.png "View Oracle DB System Node IP details")
 
    3. Open a terminal or a bash window , and invoke the below ssh command to login to the Node as **opc** user and then switch to **oracle** user
       - **ssh command**
@@ -338,10 +336,10 @@ You are now ready to **proceed to the next lab**.
         - **db-ssh.key** - is the key used/created while creating the DB System ( in Lab **Prepare Setup** , **Task 3: Create Database**, **3.2 Create a New DB System**). *FYI, Also, if **vault** was used for storing keys and secrets, this key can be obtained from there as well*
         - **xxx.xxx.xxx.xxx** - replace this value with the ip address of the node
 
-      ![SSH to Node](./images/apex_https_setup_ap1_step2_3_upt.png "SSH to Node")
+      ![SSH to Node](./images/apex_hs_setup_ap1_step2_3_upt.png "SSH to Node ")
 
    4. Open the previously downloaded **WCCRFPMGM.crt** certificate file in Notepad or Text Editor , and copy its contents.
-      ![Copy Certificate contents](./images/apex_https_setup_ap1_step2_4_upt.png "Copy Certificate contents")
+      ![Copy Certificate contents](./images/apex_hs_setup_ap1_step2_4_upt.png "Copy Certificate contents")
 
    5. In the terminal window, invoke the below command to create file **/tmp/WCCRFPMGM.crt**, paste the certificate contents and save the crt file
       - **ssh command**
@@ -349,7 +347,7 @@ You are now ready to **proceed to the next lab**.
             <copy>WCCRFPMGM.crt/</copy>
             ```
 
-      ![create certificate file in DB Node](./images/apex_https_setup_ap1_step2_5_upt.png "create certificate file in DB Node temp directory")
+      ![create certificate file in DB Node](./images/apex_hs_setup_ap1_step2_5_upt.png "create certificate file in DB Node temp directory")
 
    6. In the terminal window, invoke the below commands to create the wallet directory, create the wallet, and import the certificate as trusted certificate. Note down the **$ORACLE\_HOME/db\_wallet** location ( eg: **/u01/app/oracle/product/19.0.0.0/dbhome_1/db\_wallet**)
       - **ssh commands**
@@ -376,7 +374,7 @@ You are now ready to **proceed to the next lab**.
                   </copy>
                   ```
 
-      ![wallet creation in DB Node](./images/apex_https_setup_ap1_step2_6_upt.png "wallet creation in DB Node and import certificate")
+      ![wallet creation in DB Node](./images/apex_hs_setup_ap1_step2_6_upt.png "wallet creation in DB Node and import certificate")
 
 ### **1.3 Configure APEX to use wallet directory**
 
@@ -417,7 +415,7 @@ You are now ready to **proceed to the next lab**.
             ```
       - **Note** : *If you see any issue with the APEX URL, click on the link on error list and select the default url*
 
-      ![wallet update in APEX](./images/apex_https_setup_ap1_step3_2_upt.png "wallet update in APEX")
+      ![wallet update in APEX](./images/apex_hs_setup_ap1_step3_2_upt.png "wallet update in APEX")
 
 ## Acknowledgements
 
