@@ -266,7 +266,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 3. Navigate to **Shared Components** > Under **Data Sources**, click on **REST Data Sources**
   ![REST Data Sources](./images/apex_refresh_catalog_step1_03.png "REST Data Sources")
 
-4. Click on **quick_search_library** under the **REST Source Name** list
+4. Click on **quick\_search\_library** under the **REST Source Name** list
   ![quick_search_library Details](./images/apex_refresh_catalog_step1_04.png "quick_search_library Details")
 
 5. Click on the **REST Source Catalog** tab and then click on **Refresh from Catalog** button
@@ -275,7 +275,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 6. Click on the **Refresh from Service Catalog** button
   ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
 
-## Task 5 : Validate REST Datasource
+## Task 6 : Validate REST Datasource
 
 1. To login to your Oracle APEX Workspace, perform the following steps:
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
@@ -307,14 +307,14 @@ This task covers importing and configuring Rest Datasource Catalog.
 3. Navigate to **Shared Components** > Under **Data Sources**, click on **REST Data Sources**
   ![REST Data Sources](./images/apex_refresh_catalog_step1_03.png "REST Data Sources")
 
-4. Click on **quick_search_library** under the **REST Source Name** list
+4. Click on **quick\_search\_library** under the **REST Source Name** list
   ![quick_search_library Details](./images/apex_refresh_catalog_step1_04.png "quick_search_library Details")
 
 5. Click on the **Operations** tab and then click on the play icon under **Test Operation** column
   ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_06.png "REST Data Source - Test Operations")
 
-  > *Note: If you encounter **Certificate validation failure** , please follow the steps mentioned under **Appendix 1: Configure Wallet for https connectivity***
-    ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_07.png "REST Data Source - Test Operations")
+    > *Note: If you encounter _**Certificate validation failure**_ , please follow the steps mentioned under **Appendix 1: Configure Wallet for https connectivity** and then try **Test Operation** step again*
+      ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_07.png "REST Data Source - Test Operations")
 
     **Summary**
 
