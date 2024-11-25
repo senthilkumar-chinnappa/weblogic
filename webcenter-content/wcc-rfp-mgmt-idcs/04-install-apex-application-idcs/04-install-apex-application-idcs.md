@@ -316,6 +316,12 @@ This task covers importing and configuring Rest Datasource Catalog.
     > *Note: If you encounter _**Certificate validation failure**_ , please follow the steps mentioned under **Appendix 1: Configure Wallet for https connectivity** and then try **Test Operation** step again*
       ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_07.png "REST Data Source - Test Operations")
 
+6. Once the REST URL invocation is successful, it displays the **Test Results** page.
+
+  > Note : Please ignore if there is no data returned or found
+
+  ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_08.png "REST Data Source - Test Operations")
+
 **Summary**
         You have now successfully Installed the RFP Response Management Application for the RFP Application.
 
