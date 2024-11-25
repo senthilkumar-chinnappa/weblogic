@@ -313,14 +313,15 @@ This task covers importing and configuring Rest Datasource Catalog.
 5. Click on the **Operations** tab and then click on the play icon under **Test Operation** column
   ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_06.png "REST Data Source - Test Operations")
 
-    > *Note: If you encounter _**Certificate validation failure**_ , please follow the steps mentioned under **Appendix 1: Configure Wallet for https connectivity** and then try **Test Operation** step again*
+    > *Note: If you encounter **Certificate validation failure** , please follow the steps mentioned under **Appendix 1: Configure Wallet for https connectivity** and then try **Test Operation** step again*
       ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_07.png "REST Data Source - Test Operations")
+
+      *Only if it still shows the same certificate error after adding first root entry in the certificate hierarchy, try again by adding the second/intermediate certificate entry as well*
 
 6. Once the REST URL invocation is successful, it displays the **Test Results** page.
 
   > Note : Please ignore if there is no data returned or found
-
-  ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_08.png "REST Data Source - Test Operations")
+    ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_08.png "REST Data Source - Test Operations")
 
 **Summary**
         You have now successfully Installed the RFP Response Management Application for the RFP Application.
@@ -354,7 +355,7 @@ You are now ready to **proceed to the next lab**.
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_upt.png "View the Certificate details and export")
 
-    > **Note** : If there is more than one level of hierarchy, select the top most root entry
+    > **Note** : If there is more than one level of hierarchy, select the top most root entry.
       ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_1_upt.png "View the Certificate details and export")
 
    4. Save the file as the below filename
@@ -471,7 +472,6 @@ You are now ready to **proceed to the next lab**.
 
    3. Instance Settings changes gets saved successfully.
     ![Instance settings changes successfully](./images/apex_hs_setup_ap1_step3_3_upt.png "Instance settings changes successfully")
-
 
 ## Acknowledgements
 
