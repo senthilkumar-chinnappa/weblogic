@@ -336,18 +336,20 @@ You are now ready to **proceed to the next lab**.
    1. Open your browser and enter the **URL** to sign in to the APEX development environment.
       - URL
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
 
-      > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
+      > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
-      > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
+      > **Note** : *If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid***
       ![Open Certificate Info](./images/apex_hs_setup_ap1_step1_1_upt.png "View the Certificate details")
-
 
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_upt.png "View the Certificate details and export")
+
+        > **Note** : If there is more than one level of hierarchy, select the top most root entry
+          ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_1_upt.png "View the Certificate details and export")
 
    4. Save the file as the below filename
       - **Filename**
@@ -423,10 +425,10 @@ You are now ready to **proceed to the next lab**.
    1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
       - **URL**
             ```
-            <copy>http://localhost:16200/ords/</copy>
+            <copy>https://localhost:16200/ords/</copy>
             ```
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
 
-        > Note : Replace `"http://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
       - **Workspace Name**
             ```
             <copy>INTERNAL</copy>
