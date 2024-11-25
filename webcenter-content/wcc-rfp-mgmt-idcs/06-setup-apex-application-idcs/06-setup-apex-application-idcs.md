@@ -1,4 +1,4 @@
-# Setup APEX Application & Configure SSO/IDCS
+# Setup APEX Application for RFP UseCase Flow
 
 ## Introduction
 

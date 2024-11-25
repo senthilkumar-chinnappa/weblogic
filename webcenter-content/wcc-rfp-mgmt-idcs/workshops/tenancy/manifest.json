@@ -38,12 +38,7 @@
       "filename": "./../../05-config-apex-application-with-sso-idcs/05-config-apex-application-with-sso-idcs.md"
     },
     {
-      "title": "Lab 5: DB Wallet Configuration for HTTPS",
-      "description": "This lab shows you how to Config WCC RFP Management System APEX Application with SSO",
-      "filename": "./../../05-db-wallet-config/05-db-wallet-config.md"
-    },
-    {
-      "title": "Lab 6: Setup APEX Application",
+      "title": "Lab 6: Setup APEX Application for RFP UseCase Flow",
       "description": "This lab shows you how to create new workspace and import WCC RFP Management System APEX Application",
       "filename": "./../../06-setup-apex-application-idcs/06-setup-apex-application-idcs.md"
     },
