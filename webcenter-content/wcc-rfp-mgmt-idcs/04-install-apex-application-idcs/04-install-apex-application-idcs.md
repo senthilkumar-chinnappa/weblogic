@@ -348,8 +348,8 @@ You are now ready to **proceed to the next lab**.
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_upt.png "View the Certificate details and export")
 
-        > **Note** : If there is more than one level of hierarchy, select the top most root entry
-          ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_1_upt.png "View the Certificate details and export")
+      > **Note** : If there is more than one level of hierarchy, select the top most root entry
+        ![Export Certificate](./images/apex_hs_setup_ap1_step1_2_1_upt.png "View the Certificate details and export")
 
    4. Save the file as the below filename
       - **Filename**
@@ -420,7 +420,7 @@ You are now ready to **proceed to the next lab**.
 
 ### **1.3 Configure APEX to use wallet directory**
 
-      To Configure APEX to use wallet directory, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
+  *To Configure APEX to use wallet directory, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance*
 
    1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
       - **URL**
