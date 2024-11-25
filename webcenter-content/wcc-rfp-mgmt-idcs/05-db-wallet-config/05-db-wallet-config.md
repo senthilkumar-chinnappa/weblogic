@@ -142,4 +142,3 @@
 
    3. Instance Settings changes gets saved successfully.
     ![Instance settings changes successfully](./images/apex_hs_setup_ap1_step3_3_upt.png "Instance settings changes successfully")
-
