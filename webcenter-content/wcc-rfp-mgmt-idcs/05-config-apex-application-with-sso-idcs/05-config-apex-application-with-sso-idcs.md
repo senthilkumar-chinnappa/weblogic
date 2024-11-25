@@ -27,7 +27,7 @@ This lab assumes you have:
   - Lab: Setup WCC Marketplace Environment
   - Lab: Initialize Environment
 
-## Task 1: Create New APEX Workspace for RFP Management Application
+## Task 1: Create New IDCS SAML Client App for Apex Application Login
 
 To create new APEX workspace, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
 
@@ -107,7 +107,7 @@ To create new APEX workspace, you need log in to Oracle APEX's default **INTERNA
 
  ![This image shows the APEX/ORDS Workspace Created Page](./images/apex_create_workspace_step5.png "APEX/ORDS Workspace Created Page")
 
-## Task 2: Login to Newly Created APEX Workspace
+## Task 2: Configure SAML Sign-In in APEX
 
 To log in to Oracle APEX, you need a Workspace Name, username, and the password created for that Workspace. In this hands-on lab, you log in to your Oracle APEX Workspace.
 
@@ -152,89 +152,7 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
 
   ![Workspace Home Page](./images/apex_login_workspace_step3.png "Workspace Home Page")
 
-## Task 3: Install RFP Management Application
-
-This task covers installing and running a WCC RFP Management System APEX application.
-
-1. Edit the downloaded APEX Application sql file **wcc-rfp-mgmt-system-apex-app-idcs.sql** in a text editor (eg: Notepad) , replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
-      - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
-
-      > Note: *In the scenario, where WebCenter Content is configured with IDCS or any other username ( other than **weblogic** )*, replace these two values as well:
-      - Replace **"weblogic"** with *WebCenter Content Username* which has *Administrator Privileges* on WebCenter Content **&**
-      - Replace **"Welcome1"** with the *Password for the above user*
-
-      ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task3_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR ")
-
-2. After Login to the WORKSPACE **WCCRFPMGMT** as ADMIN user, in the Home Page, Under  **App Builder** , click on **Import**
-  ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
-
-3. Select the updated file **wcc-rfp-mgmt-system-apex-app.sql**  , ensure that the **File Type** is selected as **Application, Page or Component** and click **Next** Button
-  ![Application sql file import](./images/apex_task3_step2.png "WCC RFP Management APEX Application Import Page")
-
-4. In the **Install Application** Page, Verify the below values and click **Install Application** Button
-
-    - *Current Workspace* : **WCCRFPMGMT**
-    - *Parsing Schema* : **WCCRFPMGMT_SCHEMA**
-    - *Build Status* : **Run and Build Application**
-    - *Install as Application* : **Reuse Application ID 999 From Imported Application**
-  ![Install Application Page](./images/apex_task3_step3.png "WCC RFP Management APEX  - Install Application Page")
-
-5. In the **Install Application** - **Credentials** Page, for **Credentials for WCC RFP Mgmt**, Update the values for the below *( Update it with the WebCenter Content User Credentials which has Administrator Privileges on WebCenter Content )* and click **Next** Button
-    - **Client ID or Username** : Enter
-          ```
-          <copy>weblogic</copy>
-          ```
-    - **Client Secret or Password** : Enter
-          ```
-          <copy>Welcome1</copy>
-          ```
-    - **Verify Client Secret / Password** : Enter
-          ```
-          <copy>Welcome1</copy>
-          ```
-      > Note: In the scenario, where WebCenter Content is configured with IDCS or any other username (other than **weblogic**), update these values accordingly
-  ![Install Application - Credentials Page](./images/apex_task3_step4.png "WCC RFP Management APEX  - Install Application - Credentials Page")
-
-6. After the Credentials is updated, in the **Application Installed** Page, click on **Install Supporting Objects** button
-  ![Application Installed - Install Supporting Objects](./images/apex_task3_step5.png "WCC RFP Management APEX  - Application Installed - Install Supporting Objects")
-
-7. After the Supporting Objects installed, click on **Install Summary** button , to view the status of the Supporting objects installation
-  ![Supporting Objects Installed](./images/apex_task3_step6.png "WCC RFP Management APEX Application - Supporting Objects Installed")
-
-## Task 4: Import REST DataSource Catalog
-
-This task covers importing and configuring Rest Datasource Catalog.
-
-1. Edit the downloaded APEX Application sql file **WCC\_RFP\_Rest\_Catalog.sql** in a text editor (eg: Notepad) ,  replace `"localhost"` with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`) and save the file.
-       - The **WLS\_NODE1\_IPADDR** is noted at the end of **Lab 2: Setup WCC Marketplace Environment** > **Task 1: Provision WebCenter Content Stack**
-  ![Edit in Notepad - replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR](./images/apex_task4_step0_1_1.png "replace localhost with WLS Node 1 Private IP Address - WLS_NODE1_IPADDR")
-
-2. In the Home Page, Under  **Apex Builder** , click on **Import**
-  ![App Builder](./images/apex_task3_step1.png "App Builder > Import ")
-
-3. Select the updated file **WCC_RFP_Rest_Catalog.sql** , ensure that the **File Type** is selected as **REST Source Catalog** and click **Next** Button
-  ![REST Datasource sql file import](./images/apex_task4_step2.png "WCC RFP Management APEX Application - REST Datasource Catalog Import Page")
-
-4. Click **Next** in the **Import** Page
-  ![REST Datasource Import](./images/apex_task4_step3.png "WCC RFP Management APEX Application - REST Datasource Import Page")
-
-5. In the **Rest Catalog Import** Page, Enter the value for **Catalog Group** and click on **Import REST Catalog** Button
-    - **Catalog Group** : Enter
-            ```
-            <copy>WCC_RFP_REST_CATALOG_GROUP</copy>
-            ```
-  ![Rest Catalog Import](./images/apex_task4_step4.png "WCC RFP Management APEX Application - Rest Catalog Import")
-
-6. After the REST Catalog is imported, click on **1Services** under the **Contents** tab for the imported **WCC RFP Rest Catalog**
-  ![Rest Catalog Imported](./images/apex_task4_step5.png "WCC RFP Management APEX Application - Rest Catalog Imported")
-
-7. In the **Catalog Services** list, click on the *Name* **quick\_search\_library**
-  ![Catalog Services](./images/apex_task4_step6.png "WCC RFP Management APEX Application - Catalog Services")
-
-8. In the **Service Details** Section, Verify the **Base URL** with the WLS Node 1 Private IP Address **WLS\_NODE1\_IPADDR** ( eg: `"10.15.xx.xxx"`)  and click **Apply Changes** Button
-  ![Service Details - Base URL Update](./images/apex_task4_step7.png "WCC RFP Management APEX Application - Service Details - Base URL Update")
-
-## Task 5 : Refresh REST Datasource Catalog
+## Task 3 : Enable SAML Authentication for APEX Application
 
 1. To login to your Oracle APEX Workspace, perform the following steps:
     - Open your browser and enter the **URL** to sign in to the APEX development environment.
@@ -275,7 +193,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 6. Click on the **Refresh from Service Catalog** button
   ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
 
-## Task 6 : Create IDCS SAML Client for APEX Application
+## Task 4 : Validate APEX Application Login with SSO
 
 1. Login to your Oracle APEX Workspace, using the following steps:
 
@@ -308,7 +226,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 3. Check if the Users are already present. If not, create the users by clicking on **Create User** button
   ![Create User](./images/add_apex_users_step3.png "Create User")
 
-## Task 7 : Create Users in IDCS & Assign WCC Groups
+## Task 5 : Update WCC OAuth info for invoking from APEX Application
 
 1. Login to your Oracle APEX Workspace, using the following steps:
 
@@ -455,7 +373,7 @@ This task covers importing and configuring Rest Datasource Catalog.
 
   ![Create Other Users](./images/add_apex_users_step5.png "Create Other Users")
 
-## Task 7: Add Section Templates in RFP Response Management Application
+## Task 6: Verify User Info details from WCC based on Logged-In User
 
 1. To login to the WCC RFP Response Management System Application, perform the following steps:
 
