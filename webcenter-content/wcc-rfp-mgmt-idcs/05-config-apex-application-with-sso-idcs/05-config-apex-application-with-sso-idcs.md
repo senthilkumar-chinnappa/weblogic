@@ -1,4 +1,4 @@
-# Setup APEX Application & Configure SSO/IDCS
+# Configure APEX Application with SSO/IDCS
 
 ## Introduction
 
