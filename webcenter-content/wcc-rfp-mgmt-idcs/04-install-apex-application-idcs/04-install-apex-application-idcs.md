@@ -304,6 +304,9 @@ You are now ready to **proceed to the next lab**.
    2. In the browser header section, before the url, click on the **Not Secure** icon. Then click on **Certificate is not valid** to **Show certificate** details
       > **Note** : If the url is configured with valid certificate , it'll show a **Secure Lock** icon and will list as **Certificate is valid**
       ![Open Certificate Info](./images/apex_https_setup_ap1_step1_1_upt.png "View the Certificate details")
+    ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
+    ![Open Certificate Info 1](./images/apex_https_setup_ap1_step1_1_upt.png "Refresh from Service Catalog 1")
+
 
    3. In the **Certificate Viewer** window, in the **Details** tab, click on the top root entry under the **Certificate Hierarchy** and click **Export** button
       ![Export Certificate](./images/apex_https_setup_ap1_step1_2_upt.png "View the Certificate details and export")
