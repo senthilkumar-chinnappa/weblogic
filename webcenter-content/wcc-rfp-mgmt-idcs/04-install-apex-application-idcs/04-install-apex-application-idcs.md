@@ -275,9 +275,50 @@ This task covers importing and configuring Rest Datasource Catalog.
 6. Click on the **Refresh from Service Catalog** button
   ![Refresh from Service Catalog](./images/apex_refresh_catalog_step1_06.png "Refresh from Service Catalog")
 
+## Task 5 : Validate REST Datasource
+
+1. To login to your Oracle APEX Workspace, perform the following steps:
+    - Open your browser and enter the **URL** to sign in to the APEX development environment.
+      - **URL**
+            ```
+            <copy>https://localhost:16200/ords/</copy>
+            ```
+
+            > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
+    - The login page appears. Enter the **Workspace Name, Username, and Password**. Click **Sign In**.
+      - **Workspace Name**: Enter
+            ```
+            <copy>WCCRFPMGMT</copy>
+            ```
+      - **Username**: Enter
+            ```
+            <copy>ADMIN</copy>
+            ```
+      - **Password**: Enter
+            ```
+            <copy>WelCwcm123##</copy>
+            ```
+  ![Workspace Login](./images/apex_login_workspace_step1.png "Login to APEX Workspace")
+
+2. Click on **App Builder** , then click on **RFP Response Management System** Application
+  ![RFP Response Management System App Details](./images/apex_refresh_catalog_step1_01.png "RFP Response Management System App Details")
+
+3. Navigate to **Shared Components** > Under **Data Sources**, click on **REST Data Sources**
+  ![REST Data Sources](./images/apex_refresh_catalog_step1_03.png "REST Data Sources")
+
+4. Click on **quick_search_library** under the **REST Source Name** list
+  ![quick_search_library Details](./images/apex_refresh_catalog_step1_04.png "quick_search_library Details")
+
+5. Click on the **Operations** tab and then click on the play icon under **Test Operation** column
+  ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_06.png "REST Data Source - Test Operations")
+
+  > *Note: If you encounter **Certificate validation failure** , please follow the steps mentioned under **Appendix 1: Configure Wallet for https connectivity***
+    ![REST Data Source - Test Operations](./images/apex_rest_datasource_test_op_step_07.png "REST Data Source - Test Operations")
+
     **Summary**
 
-    You have now successfully Installed the RFP Response Management Application for the RFP Application.
+        You have now successfully Installed the RFP Response Management Application for the RFP Application.
 
 You are now ready to **proceed to the next lab**.
 
