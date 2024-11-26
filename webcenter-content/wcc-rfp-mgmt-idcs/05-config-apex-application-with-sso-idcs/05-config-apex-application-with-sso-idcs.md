@@ -29,81 +29,64 @@ This lab assumes you have:
 
 ## Task 1: Create New IDCS SAML Client App for Apex Application Login
 
-To create new APEX workspace, you need log in to Oracle APEX's default **INTERNAL** Workspaces as **ADMIN** User (or) the user with Administrator Privilege on the APEX Instance
+To create new IDCS SAML Client App, you need log in to IDCS Admin Console with the user having Administrator Privilege
 
-1. On the new *web browser* window , Login to the APEX/ORDS URL as **ADMIN** User of System's **INTERNAL** Workspace. Details are provided below
+1. On the new *web browser* window , Login to the IDCS Admin Console URL as **IDCS Administrator** User. Details are provided below
     - **URL**
           ```
-          <copy>https://localhost:16200/ords/</copy>
+          <copy>https://idcs-<tenancy-id>.identity.oraclecloud.com/ui/v1/adminconsole</copy>
           ```
 
-         > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"https://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0""`)
-    - **Workspace Name**
+         > Note : Replace `"<tenancy-id>"` with your tenancy id for IDCS URL
+
+    - **Username** - same as the user provided during the provisioning of WCC Marketplace instance
           ```
-          <copy>INTERNAL</copy>
-          ```
-    - **Username**
-          ```
-          <copy>ADMIN</copy>
+          <copy>wccadmin</copy>
           ```
     - **Password**
           ```
           <copy>WelCwcm123##</copy>
           ```
-    > **For ATP DB** *, ADMIN password is same as the ADMIN DB schema user password*.
-    > *If any issues with ADMIN credentials, Refer to **Appendix 5: Reset ADMIN password for APEX/ORDS** of the previous lab **Initialize WCC Environment** to reset ADMIN Password*
-  ![This image shows the APEX/ORDS Login Page](./images/apex_login_internal.png "APEX/ORDS Login Page")
+  ![This image shows the IDCS Admin Console Login Page](./images/01_idcs_saml_client_create_step1.png "IDCS Admin Console Login Page")
 
-2. In the *Administration Services* Landing page , Click on **Create Workspace** button on the top right corner
-  ![This image shows the APEX/ORDS Landing Page](./images/apex_create_workspace_homepage.png "APEX/ORDS Landing Page")
+2. In the landing page for the Identity Domain on OCI, click on **Take me there** button to open the Identity Domain Admin Console page
+  ![This image shows the IDCS Admin Console Landing Page](./images/01_idcs_saml_client_create_step1_2.png "IDCS Admin Console Landing Page")
 
-3. Provide the value for **Workspace Name**  and click **Next** Button
-        ```
-        <copy>WCCRFPMGMT</copy>
-        ```
-  ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step1.png "APEX/ORDS Create Workspace Page")
+3. In the **Identity Domain** Page, Click on **Integrated applications** and then **Add application** button
+  ![This image shows the Identity Domain Integrated applications Page](./images/01_idcs_saml_client_create_step1_3.png "Identity Domain Integrated applications Page")
 
-4. Provide the values for DB Schema details as mentioned below and click **Next** Button
-    - **Re-use existing schema?**: Select **No**
+4. In the **Add application** Page, Click on **SAML Application** and then **Launch Workflow** button
+  ![This image shows the Add application - SAML Application Page](./images/01_idcs_saml_client_create_step1_4.png "Add application - SAML Application Page")
+
+5. Provide the values for New SAML Application as mentioned below and click **Next** Button
     - **Schema Name**: Enter
           ```
-          <copy>WCCRFPMGMT_SCHEMA</copy>
+          <copy>WCCRFPMGMT_SAML_App</copy>
           ```
-    - **Schema Password**: Enter
+    - **Description**: Enter
           ```
-          <copy>WelCwcm123##</copy>
+          <copy>SAML App for WCC RFP Management Apex Application</copy>
           ```
-    - **Space Quota (MB)**: Select **500**
-  ![This image shows the APEX/ORDS Create Workspace Page - DB Schema Details](./images/apex_create_workspace_step2.png "APEX/ORDS Create Workspace Page - DB Schema Details")
+    - **Authentication and authorization**: Select **Enforce grants as authorization**
+  ![This image shows the Add SAML Application Page](./images/01_idcs_saml_client_create_step1_5_1.png "Add SAML Application Page")
+  ![This image shows the Add SAML Application Page](./images/01_idcs_saml_client_create_step1_5_2.png "Add SAML Application Page")
 
-5. Provide the values for Workspace **ADMIN** User details as mentioned below and click **Next** Button
+6. In the **Configure single sign-on** section, Click on **Download signing certificate** and **Download identity provider metadata** to download those files & Provide the Entity ID and Assertion consumer URL details as mentioned below *(it would be same for both Entity ID and Assertion consumer URL)*
+    - **Entity ID**: Enter
+          ```
+          <copy>https://localhost:16200/ords/apex_authentication.saml_callback</copy>
+          ```
+    - **Assertion consumer URL**: Enter
+          ```
+          <copy>https://localhost:16200/ords/apex_authentication.saml_callback</copy>
+          ```
+      > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+   ![This image shows the Configure single sign-on Page](./images/01_idcs_saml_client_create_step1_6.png "Configure single sign-on Page")
 
-    - **Administrator Username**: Enter
-          ```
-          <copy>ADMIN</copy>
-          ```
-    - **Administrator Password**: Enter
-          ```
-          <copy>Welcome1</copy>
-          ```
-    - **First Name**: Enter
-          ```
-          <copy>Admin</copy>
-          ```
-    - **Last Name**: Enter
-          ```
-          <copy>User</copy>
-          ```
-    - **Email**: Enter your email id
-          ```
-          <copy>admin_user@email.com</copy>
-          ```
-  ![This image shows the APEX/ORDS Create Workspace Page - Admin User Details](./images/apex_create_workspace_step3.png "APEX/ORDS Create Workspace Page - ADMIN User Details")
-
-6. Review the details and click **Create Workspace** Button
+7. Review the details and click **Create Workspace** Button
  ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step4.png "APEX/ORDS Create Workspace Page")
 
-7. After the workspace is successfully created, it will display  workspace details.  click **Done** Button
+8. After the workspace is successfully created, it will display  workspace details.  click **Done** Button
 
  ![This image shows the APEX/ORDS Workspace Created Page](./images/apex_create_workspace_step5.png "APEX/ORDS Workspace Created Page")
 
@@ -529,6 +512,167 @@ To log in to Oracle APEX, you need a Workspace Name, username, and the password 
     You have now successfully setup the RFP Response Management Application for the RFP Application and User Flow.
 
 You are now ready to **proceed to the next lab**.
+
+## Appendix 1: Obtain IDCS Client ID, Certificate and Private Key from the Weblogic Credentials
+
+    *Obtain the already configured IDCS Client ID for OAuth, Certificate and Private Key for IDCS OAuth Client App from the Weblogic EM Console , under Credentials*
+
+### **1.1 Obtain IDCS Certificate**
+
+   1. On the new *web browser* window , Login to the Weblogic EM Console URL as **weblogic** User and click on **Sign in** button. Details are provided below
+      - **URL**
+            ```
+            <copy>https://localhost:7001/em</copy>
+            ```
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
+      - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+      - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
+      ![This image shows Weblogic EM Console Login Page](./images/09_idcs_saml_client_create_step9_1.png "Weblogic EM Console Login Page")
+
+   2. Under the Domain Name, Navigate to **Weblogic Domain**, **Security**, click on **Credentials**
+      ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_2.png "EM Console Page Credentials Navigation")
+
+   3. In the **Credentials** Page, Click on the triangle Expand icon next to **oracle.wsm.security**
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_3.png "EM Console Page Credentials Page")
+
+   4. Select **idcs.signin.cert** and Click on the **Edit** button
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1.png "EM Console Page Credentials Page")
+
+   5. Select the entire value specified in the **Credential**, right-click and copy the value
+      > Note : This value will be referred as *WCC_IDCS_OAUTH_SIGNIN_CERT*
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_2.png "EM Console Page Credentials Page")
+
+   6. Open text editor (eg: Notepad), paste the copied cert value *between the below two entries*
+      - **Cert entry beginning**
+            ```
+            <copy>-----BEGIN CERTIFICATE-----</copy>
+            ```
+      - **Cert entry End**
+            ```
+            <copy>-----END CERTIFICATE-----</copy>
+            ```
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_3.png "EM Console Page Credentials Page")
+
+   7. Save the file as *IDCS_Signin_Cert.cert* ( select **Save as type** as **All files (\*.\*)** )
+      - **IDCS Sign-In File Name**
+            ```
+            <copy>IDCS_Signin_Cert.cert</copy>
+            ```
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_4.png "EM Console Page Credentials Page")
+
+### **1.2 Obtain IDCS Private Key**
+
+   1. On the new *web browser* window , Login to the Weblogic EM Console URL as **weblogic** User and click on **Sign in** button. Details are provided below
+      - **URL**
+            ```
+            <copy>https://localhost:7001/em</copy>
+            ```
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
+      - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+      - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
+      ![This image shows Weblogic EM Console Login Page](./images/09_idcs_saml_client_create_step9_1.png "Weblogic EM Console Login Page")
+
+   2. Under the Domain Name, Navigate to **Weblogic Domain**, **Security**, click on **Credentials**
+      ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_2.png "EM Console Page Credentials Navigation")
+
+   3. In the **Credentials** Page, Click on the triangle Expand icon next to **oracle.wsm.security**
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_3.png "EM Console Page Credentials Page")
+
+   4. Select **idcs.signin.privatekey** and Click on the **Edit** button
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2.png "EM Console Page Credentials Page")
+
+   5. Select the entire value specified in the **Credential**, right-click and copy the value
+      > Note : This value will be referred as *WCC_IDCS_OAUTH_PRIVATE_KEY*
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2_2.png "EM Console Page Credentials Page")
+
+   6. Open text editor (eg: Notepad), paste the copied cert value *between the below two entries*
+      - **Key entry beginning**
+            ```
+            <copy>-----BEGIN RSA PRIVATE KEY-----</copy>
+            ```
+      - **Key entry End**
+            ```
+            <copy>-----END RSA PRIVATE KEY-----</copy>
+            ```
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2_3.png "EM Console Page Credentials Page")
+
+   7. Save the file as *IDCS_Signin_Private.key* ( select **Save as type** as **All files (\*.\*)** )
+      - **IDCS Sign-In Private Key File Name**
+            ```
+            <copy>IDCS_Signin_Private.key</copy>
+            ```
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2_4.png "EM Console Page Credentials Page")
+
+### **1.3 Obtain IDCS Client ID and Secret**
+
+   1. On the new *web browser* window , Login to the Weblogic EM Console URL as **weblogic** User and click on **Sign in** button. Details are provided below
+      - **URL**
+            ```
+            <copy>https://localhost:7001/em</copy>
+            ```
+        > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
+      - **Username**
+            ```
+            <copy>weblogic</copy>
+            ```
+      - **Password**
+            ```
+            <copy>Welcome1</copy>
+            ```
+      ![This image shows Weblogic EM Console Login Page](./images/09_idcs_saml_client_create_step9_1.png "Weblogic EM Console Login Page")
+
+   2. Under the Domain Name, Navigate to **Weblogic Domain**, **Security**, click on **Credentials**
+      ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_2.png "EM Console Page Credentials Navigation")
+
+   3. In the **Credentials** Page, Click on the triangle Expand icon next to **oracle.wsm.security**
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_3.png "EM Console Page Credentials Page")
+
+   4. Select **idcs.credentials** and Click on the **Edit** button
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_3.png "EM Console Page Credentials Page")
+
+   5. Select the entire value for the WCC IDCS OAuth Client ID specified in the **User Name**, right-click and copy the value. This value will be referred as *WCC_IDCS_OAUTH_CLIENT_ID*
+      ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_3_2.png "EM Console Page Credentials Page")
+
+   6. To obtain the WCC IDCS OAuth Client Secret, please follow the below steps.
+      > Note: This value will be referred as *WCC_IDCS_OAUTH_CLIENT_SECRET*
+
+      1. Under the Domain Name, Navigate to **Weblogic Domain**, click on **System MBean Browser**
+            ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_1.png "EM Console Page Credentials Navigation")
+
+      2. In the System MBean Browser,
+            - Navigate to **Application Defined MBeans** -> **com.oracle.jps** -> **Domain: \<Domain Name\>** -> **JpsCredentialStore**. Double click on the **JpsCredentialStore** MBean.
+            - On the **Application Defined MBeans: JpsCredentialStore** Page, navigate to **Operations** tab and select/click the **getPortableCredential** operation.
+            ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_2.png "EM Console Page Credentials Navigation")
+
+      3. Specify the parameters. The first parameter is the name of the map. The second parameter is the key within a map. Then click **Invoke** to perform operation.
+            - **p1**
+                  ```
+                  <copy>oracle.wsm.security</copy>
+                  ```
+            - **p2**
+                  ```
+                  <copy>idcs.credentials</copy>
+                  ```
+            ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_3.png "EM Console Page Credentials Navigation")
+
+      4. Once the operation gets executed successfully, the values are listed in the **Return Value** section. Copy/Note the value for **password** under **Data**
+            > Note : This value will be referred as *WCC_IDCS_OAUTH_CLIENT_SECRET*
+            ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_4.png "EM Console Page Credentials Navigation")
 
 ## Acknowledgements
 
