@@ -552,6 +552,7 @@ You are now ready to **proceed to the next lab**.
 
    5. Select the entire value specified in the **Credential**, right-click and copy the value
       > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_SIGNIN\_CERT*
+
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_2.png "EM Console Page Credentials Page")
 
    6. Open text editor (eg: Notepad), paste the copied cert value *between the below two entries*
@@ -602,6 +603,7 @@ You are now ready to **proceed to the next lab**.
 
    5. Select the entire value specified in the **Credential**, right-click and copy the value
       > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_PRIVATE\_KEY*
+
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2_2.png "EM Console Page Credentials Page")
 
    6. Open text editor (eg: Notepad), paste the copied cert value *between the below two entries*
