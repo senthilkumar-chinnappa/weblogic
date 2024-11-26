@@ -67,7 +67,7 @@ To create new IDCS SAML Client App, you need log in to IDCS Admin Console with t
           ```
           <copy>SAML App for WCC RFP Management Apex Application</copy>
           ```
-    - **Authentication and authorization**: Select **Enforce grants as authorization**
+    - **Authentication and authorization**: Select ***Enforce grants as authorization***
   ![This image shows the Add SAML Application Page](./images/01_idcs_saml_client_create_step1_5_1.png "Add SAML Application Page")
   ![This image shows the Add SAML Application Page](./images/01_idcs_saml_client_create_step1_5_2.png "Add SAML Application Page")
 
@@ -84,12 +84,39 @@ To create new IDCS SAML Client App, you need log in to IDCS Admin Console with t
 
    ![This image shows the Configure single sign-on Page](./images/01_idcs_saml_client_create_step1_6.png "Configure single sign-on Page")
 
-7. Review the details and click **Create Workspace** Button
- ![This image shows the APEX/ORDS Create Workspace Page](./images/apex_create_workspace_step4.png "APEX/ORDS Create Workspace Page")
+7. Provide/Update the below values:
+      - **Name ID format** :  Select ***Persistent*** from the dropdown list
 
-8. After the workspace is successfully created, it will display  workspace details.  click **Done** Button
+      - **Name ID** :  Select ***Username*** from the dropdown list
 
- ![This image shows the APEX/ORDS Workspace Created Page](./images/apex_create_workspace_step5.png "APEX/ORDS Workspace Created Page")
+      - **Signing Certificate** :  Upload the ***WCC\_IDCS\_OAUTH\_SIGNIN\_CERT\_FILE*** file  ( Please refer **Appendix 1: Obtain IDCS Client ID, Certificate and Private Key from the Weblogic Credentials** - Section **Obtain IDCS Certificate** on how to retrieve/obtain this file )
+
+   ![This image shows the Add SAML Application Page](./images/01_idcs_saml_client_create_step1_7.png "Add SAML Application Page")
+
+8. In the **Additional configurations** section, provide/update the below values and click **Finish** button
+      - **Signed SSO** :  Select ***Assertion and response*** from the dropdown list
+
+      - Checkbox **Include signing certificate in signature** :  ***Checked / Selected***
+
+      - **Signature hashing algorithm** :  Select ***SHA-256*** from the dropdown list
+
+      - Checkbox **Enable single logout** :  ***Un-Checked / Un-Selected***
+
+   ![This image shows the Add SAML Application Page](./images/01_idcs_saml_client_create_step1_8.png "Add SAML Application Page")
+
+9. In the **Application Information** Section, Click on **Copy** link next to the **Application ID** to copy the ID (This will be referred as ***WCC\_IDCS\_WCCRFPMGMT\_SAML\_APP\_ID*** )  and then click on **Activate** button
+  ![This image shows the Add application - SAML Application Page](./images/01_idcs_saml_client_create_step1_9.png "Add application - SAML Application Page")
+
+      In the **Activate application** confirmation pop-up dialog box, Click on **Activate Application** button.
+      ![This image shows the Activate application - SAML Application Page](./images/01_idcs_saml_client_create_step1_9_2.png "Activate application - SAML Application Page")
+
+10. After the Application is **ACTIVE**, in the **Resources** list, click on **Groups** and click on **Assign groups** button. In the **Assign groups** list, select the below list of group names and click on **Assign** button
+      - **admin**
+      - **contributor**
+      - **guest**
+      - **sysmanager**
+
+   ![This image shows the Add Groups Page](./images/01_idcs_saml_client_create_step1_10.png "Add Groups Page")
 
 ## Task 2: Configure SAML Sign-In in APEX
 
@@ -516,7 +543,8 @@ You are now ready to **proceed to the next lab**.
 
 ## Appendix 1: Obtain IDCS Client ID, Certificate and Private Key from the Weblogic Credentials
 
-- *Obtain the already configured IDCS Client ID for OAuth, Certificate and Private Key for IDCS OAuth Client App from the Weblogic EM Console , under Credentials*
+- Obtain the already configured IDCS Client ID, Certificate and Private Key for IDCS OAuth Client App using the Weblogic EM Console - Credentials
+
 - This consists of the below steps:
       - **Obtain IDCS Certificate**
       - **Obtain IDCS Private Key**
@@ -566,10 +594,12 @@ You are now ready to **proceed to the next lab**.
             ```
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_3.png "EM Console Page Credentials Page")
 
-   7. Save the file as *IDCS_Signin_Cert.cert* ( select **Save as type** as **All files (\*.\*)** )
+   7. Save the file as *IDCS_Signin_Cert.crt* ( select **Save as type** as **All files (\*.\*)** )
+         > Note : This file will be referred as *WCC\_IDCS\_OAUTH\_SIGNIN\_CERT\_FILE*
+
       - **IDCS Sign-In File Name**
             ```
-            <copy>IDCS_Signin_Cert.cert</copy>
+            <copy>IDCS_Signin_Cert.crt</copy>
             ```
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_4.png "EM Console Page Credentials Page")
 
@@ -618,6 +648,8 @@ You are now ready to **proceed to the next lab**.
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2_3.png "EM Console Page Credentials Page")
 
    7. Save the file as *IDCS_Signin_Private.key* ( select **Save as type** as **All files (\*.\*)** )
+            > Note : This file will be referred as *WCC\_IDCS\_OAUTH\_PRIVATE\_KEY\_FILE*
+
       - **IDCS Sign-In Private Key File Name**
             ```
             <copy>IDCS_Signin_Private.key</copy>
