@@ -59,7 +59,7 @@ To create new IDCS SAML Client App, you need log in to IDCS Admin Console with t
   ![This image shows the Add application - SAML Application Page](./images/01_idcs_saml_client_create_step1_4.png "Add application - SAML Application Page")
 
 5. Provide the values for New SAML Application as mentioned below and click **Next** Button
-    - **Schema Name**: Enter
+    - **Name**: Enter
           ```
           <copy>WCCRFPMGMT_SAML_App</copy>
           ```
@@ -81,6 +81,7 @@ To create new IDCS SAML Client App, you need log in to IDCS Admin Console with t
           <copy>https://localhost:16200/ords/apex_authentication.saml_callback</copy>
           ```
       > Note : Replace `"https://localhost"` with your **hosturl** ( eg: `"http://wcc-rfpmgmt-livelab.livelabs.oraclevcn.com"` or `"https://192.0.0.0"`)
+
    ![This image shows the Configure single sign-on Page](./images/01_idcs_saml_client_create_step1_6.png "Configure single sign-on Page")
 
 7. Review the details and click **Create Workspace** Button
