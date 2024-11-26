@@ -678,7 +678,8 @@ You are now ready to **proceed to the next lab**.
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_3.png "EM Console Page Credentials Navigation")
 
       4. Once the operation gets executed successfully, the values are listed in the **Return Value** section. Copy/Note the value for **password** under **Data**
-         > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_CLIENT\_SECRET*
+            > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_CLIENT\_SECRET*
+
          ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_4.png "EM Console Page Credentials Navigation")
 
 ## Acknowledgements
