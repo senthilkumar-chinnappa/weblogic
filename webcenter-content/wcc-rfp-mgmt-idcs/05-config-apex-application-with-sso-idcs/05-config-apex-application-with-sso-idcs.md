@@ -550,7 +550,7 @@ You are now ready to **proceed to the next lab**.
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1.png "EM Console Page Credentials Page")
 
    5. Select the entire value specified in the **Credential**, right-click and copy the value
-      > Note : This value will be referred as *WCC_IDCS_OAUTH_SIGNIN_CERT*
+      > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_SIGNIN\_CERT*
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_1_2.png "EM Console Page Credentials Page")
 
    6. Open text editor (eg: Notepad), paste the copied cert value *between the below two entries*
@@ -600,7 +600,7 @@ You are now ready to **proceed to the next lab**.
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2.png "EM Console Page Credentials Page")
 
    5. Select the entire value specified in the **Credential**, right-click and copy the value
-      > Note : This value will be referred as *WCC_IDCS_OAUTH_PRIVATE_KEY*
+      > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_PRIVATE\_KEY*
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_2_2.png "EM Console Page Credentials Page")
 
    6. Open text editor (eg: Notepad), paste the copied cert value *between the below two entries*
@@ -649,11 +649,11 @@ You are now ready to **proceed to the next lab**.
    4. Select **idcs.credentials** and Click on the **Edit** button
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_3.png "EM Console Page Credentials Page")
 
-   5. Select the entire value for the WCC IDCS OAuth Client ID specified in the **User Name**, right-click and copy the value. This value will be referred as *WCC_IDCS_OAUTH_CLIENT_ID*
+   5. Select the entire value for the WCC IDCS OAuth Client ID specified in the **User Name**, right-click and copy the value. This value will be referred as *WCC\_IDCS\_OAUTH\_CLIENT\_ID*
       ![This page shows the EM Console Page Credentials Page](./images/09_idcs_saml_client_create_step9_4_3_2.png "EM Console Page Credentials Page")
 
    6. To obtain the WCC IDCS OAuth Client Secret, please follow the below steps.
-      > Note: This value will be referred as *WCC_IDCS_OAUTH_CLIENT_SECRET*
+      > Note: This value will be referred as *WCC\_IDCS\_OAUTH\_CLIENT\_SECRET*
 
       1. Under the Domain Name, Navigate to **Weblogic Domain**, click on **System MBean Browser**
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_1.png "EM Console Page Credentials Navigation")
@@ -675,7 +675,7 @@ You are now ready to **proceed to the next lab**.
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_3.png "EM Console Page Credentials Navigation")
 
       4. Once the operation gets executed successfully, the values are listed in the **Return Value** section. Copy/Note the value for **password** under **Data**
-            > Note : This value will be referred as *WCC_IDCS_OAUTH_CLIENT_SECRET*
+            > Note : This value will be referred as *WCC\_IDCS\_OAUTH\_CLIENT\_SECRET*
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_4.png "EM Console Page Credentials Navigation")
 
 ## Acknowledgements
