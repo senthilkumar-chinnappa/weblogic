@@ -515,7 +515,11 @@ You are now ready to **proceed to the next lab**.
 
 ## Appendix 1: Obtain IDCS Client ID, Certificate and Private Key from the Weblogic Credentials
 
-    *Obtain the already configured IDCS Client ID for OAuth, Certificate and Private Key for IDCS OAuth Client App from the Weblogic EM Console , under Credentials*
+- *Obtain the already configured IDCS Client ID for OAuth, Certificate and Private Key for IDCS OAuth Client App from the Weblogic EM Console , under Credentials*
+- This consists of the below steps:
+      - **Obtain IDCS Certificate**
+      - **Obtain IDCS Private Key**
+      - **Obtain IDCS Client ID and Secret**
 
 ### **1.1 Obtain IDCS Certificate**
 
