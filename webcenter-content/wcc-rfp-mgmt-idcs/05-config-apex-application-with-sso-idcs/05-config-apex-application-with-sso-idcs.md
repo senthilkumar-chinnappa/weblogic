@@ -659,8 +659,8 @@ You are now ready to **proceed to the next lab**.
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_1.png "EM Console Page Credentials Navigation")
 
       2. In the System MBean Browser,
-            - Navigate to **Application Defined MBeans** -> **com.oracle.jps** -> **Domain: \<Domain Name\>** -> **JpsCredentialStore**. Double click on the **JpsCredentialStore** MBean.
-            - On the **Application Defined MBeans: JpsCredentialStore** Page, navigate to **Operations** tab and select/click the **getPortableCredential** operation.
+         - Navigate to **Application Defined MBeans** -> **com.oracle.jps** -> **Domain:** *Domain_Name* -> **JpsCredentialStore**. Double click on the **JpsCredentialStore** MBean.
+         - On the **Application Defined MBeans: JpsCredentialStore** Page, navigate to **Operations** tab and select/click the **getPortableCredential** operation.
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_2.png "EM Console Page Credentials Navigation")
 
       3. Specify the parameters. The first parameter is the name of the map. The second parameter is the key within a map. Then click **Invoke** to perform operation.
