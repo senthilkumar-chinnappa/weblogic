@@ -667,7 +667,6 @@ You are now ready to **proceed to the next lab**.
             ![This page shows the EM Console Page Credentials Navigation](./images/09_idcs_saml_client_create_step9_6_2.png "EM Console Page Credentials Navigation")
 
       3. Specify the parameters. The first parameter is the name of the map. The second parameter is the key within a map. Then click **Invoke** to perform operation.
-
             - Value for **p1**
                   ```
                   <copy>oracle.wsm.security</copy>
